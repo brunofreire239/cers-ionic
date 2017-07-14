@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
-import { NavController, MenuController  } from 'ionic-angular';
+import { NavController,ModalController, MenuController  } from 'ionic-angular';
 
 import { CardsPage } from '../cards/cards';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
+import { ModalNotificationPage } from '../content/modal-notification';
 
 @Component({
   selector: 'page-content',
@@ -12,7 +13,7 @@ import { SignupPage } from '../signup/signup';
 })
 export class ContentPage {
 
-  constructor(public navCtrl: NavController , menu: MenuController) { 
+  constructor(private modalCtrl: ModalController, public navCtrl: NavController , menu: MenuController) { 
     menu.enable(true);
   }
 
@@ -28,7 +29,17 @@ export class ContentPage {
   }
   
 
-  responderSimulado() {
-      
+  abrirQuestoes() {     
+       
+    let modal = this.modalCtrl.create(ModalNotificationPage);
+    modal.present();
+       
+  }
+
+   abrirAgenda() {     
+       
+    let modal = this.modalCtrl.create(ModalNotificationPage,{agenda : true});
+    modal.present();
+       
   }
 }

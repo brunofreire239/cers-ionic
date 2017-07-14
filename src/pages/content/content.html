@@ -17,19 +17,15 @@
     Painel Principal
   </h2>
   <ion-item style="height: 30%; margin-top: -3%">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-avatar width-30 >
-            <img src="assets/img/advance-card-tmntr.jpg" style="height: 94px; width: 67%;" >
-          </ion-avatar>
-        </ion-col >
-        <ion-col width-70>
-          <h2 style="margin-top:22%; margin-left: -12%; font-size: 21px;">Bruno Freire da Silva</h2>   
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    
+    <ion-list>
+      <ion-item (click)="abrirGrafico()">
+        <ion-thumbnail item-start>
+          <img src="assets/img/advance-card-tmntr.jpg">
+        </ion-thumbnail>
+        <h2>Bruno Freire da Silva</h2>
+        <p>freire_ageu@hotmail.com</p>
+      </ion-item>
+    </ion-list>
   </ion-item>
 
   <ion-list>
@@ -49,12 +45,20 @@
     <p>Todos simulados disponiveis</p>
     <button ion-button clear item-end>Entrar</button>
   </ion-item>
-  <ion-item  (click)="responderSimulado()">
+  <ion-item  (click)=" abrirQuestoes()">
     <ion-thumbnail item-start>
       <img src="assets/img/questao.png">
     </ion-thumbnail>
     <h2>Questões</h2>
     <p>Diversas questões</p>
+    <button ion-button clear item-end>Entrar</button>
+  </ion-item>
+   <ion-item  (click)=" abrirAgenda()">
+    <ion-thumbnail item-start>
+      <img src="assets/img/calendar.png">
+    </ion-thumbnail>
+    <h2>Agenda</h2>
+    <p>Faça sua Agenda</p>
     <button ion-button clear item-end>Entrar</button>
   </ion-item>
 </ion-list>

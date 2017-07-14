@@ -1,0 +1,15 @@
+
+  <ion-content padding >
+   <a> <img  [src]="url" style="width: 100%;"/></a>
+  </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">
+        <b><span ion-text  showWhen="ios">FECHAR</span></b>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

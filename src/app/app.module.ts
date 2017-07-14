@@ -5,7 +5,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
-
+import { ModalNotificationPage } from '../pages/content/modal-notification';
 import { CardsPage } from '../pages/cards/cards';
 import { ContentPage } from '../pages/content/content';
 import { ItemCreatePage } from '../pages/item-create/item-create';
@@ -66,7 +66,8 @@ export function provideSettings(storage: Storage) {
     TabsPage,
     TutorialPage,
     WelcomePage,
-    SignupPage
+    SignupPage,
+    ModalNotificationPage
   ],
   imports: [
     ChartsModule,
@@ -96,7 +97,8 @@ export function provideSettings(storage: Storage) {
     TabsPage,
     TutorialPage,
     WelcomePage,
-    SignupPage
+    SignupPage,
+    ModalNotificationPage
   ],
   providers: [
     Api,
