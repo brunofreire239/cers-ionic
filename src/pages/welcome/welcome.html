@@ -1,7 +1,7 @@
-<ion-content scroll="false">
+<ion-content >
   <div class="splash-bg"></div>
   
-<div class="titulo">
+<div class="titulo" id="testeScroll">
         <ion-title class="titulo__cabecalho" color="primary">
             <p class="titulo__cabecalho__legenda">Entrar</p>
         </ion-title>
@@ -17,12 +17,12 @@
 
       <ion-item>
         <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input type="email" placeholder="maria@exemplo.com" [(ngModel)]="email" name="email"></ion-input>
+        <ion-input type="email" placeholder="maria@exemplo.com" disabled="true" name="email"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" placeholder="xxxxxxxxxxx" [(ngModel)]="password" name="password"></ion-input>
+        <ion-input type="password" placeholder="xxxxxxxxxxx" [(ngModel)]="password" disabled="true" name="password"></ion-input>
       </ion-item>
 
       <div padding>
