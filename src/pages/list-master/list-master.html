@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    
+    <ion-title>Questões Realizadas</ion-title>
+
+    <!--<ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>-->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <div style="display: block">
+      <canvas baseChart
+        [datasets]="datasets"
+        [colors]="colorsEmptyObject"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+    <div (click)="teste()">  <button ion-button style="background:#32CD32" block>{{acerto}} - <b> Acerto(s)</b> </button></div>
+    <div (click)="teste()"><button ion-button style="background:#FF0000" block>{{erro}} - <b> Erro(s)</b></button></div>
+  
+</ion-content>

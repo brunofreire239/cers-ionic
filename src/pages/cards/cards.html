@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Simulados OAB</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card *ngFor="let item of cardItems"  (click)="abrirSimulado()">
+
+    <ion-item>
+      <h2>{{item.user.name}}</h2>
+      <p>{{item.date}}</p>
+    </ion-item>
+
+    <img [src]="item.image">
+
+    <ion-card-content>
+      <p>{{item.content}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <span>Status:</span> <p style="color:green"> Em Andamento</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

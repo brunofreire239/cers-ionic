@@ -1,0 +1,61 @@
+<ion-header>
+ 
+  <ion-toolbar color="primary" >
+     <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title >
+      CERS
+    </ion-title>
+  </ion-toolbar >
+</ion-header>
+
+<ion-content padding>
+
+
+  <h2 style="text-align: center">
+    Painel Principal
+  </h2>
+  <ion-item style="height: 30%; margin-top: -3%">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-avatar width-30 >
+            <img src="assets/img/advance-card-tmntr.jpg" style="height: 94px; width: 67%;" >
+          </ion-avatar>
+        </ion-col >
+        <ion-col width-70>
+          <h2 style="margin-top:22%; margin-left: -12%; font-size: 21px;">Bruno Freire da Silva</h2>   
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-item>
+
+  <ion-list>
+  <ion-item (click)="abrirGrafico()">
+    <ion-thumbnail item-start>
+      <img src="assets/img/grafico.png">
+    </ion-thumbnail>
+    <h2>Dados Gerais</h2>
+    <p>Questões e Simulados</p>
+    <button ion-button clear item-end>Entrar</button>
+  </ion-item>
+  <ion-item (click)="abrirSimulado()">
+    <ion-thumbnail item-start>
+      <img src="assets/img/tj.png">
+    </ion-thumbnail>
+    <h2>Simulados</h2>
+    <p>Todos simulados disponiveis</p>
+    <button ion-button clear item-end>Entrar</button>
+  </ion-item>
+  <ion-item  (click)="responderSimulado()">
+    <ion-thumbnail item-start>
+      <img src="assets/img/questao.png">
+    </ion-thumbnail>
+    <h2>Questões</h2>
+    <p>Diversas questões</p>
+    <button ion-button clear item-end>Entrar</button>
+  </ion-item>
+</ion-list>
+</ion-content>
